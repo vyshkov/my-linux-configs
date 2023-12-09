@@ -23,3 +23,10 @@ https://wiki.archlinux.org/title/GDM#Wayland_and_the_proprietary_NVIDIA_driver
 https://wiki.archlinux.org/title/Variable_refresh_rate
 
 
+## How to configure nzxt fan controller
+
+yay -S hhfc-git 
+
+https://github.com/Samsagax/hhfc
+
+sudo cp fan_control.yaml /etc/hhfc/fan_control.yaml

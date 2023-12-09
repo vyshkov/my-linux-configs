@@ -1,0 +1,58 @@
+SENSORS:
+  - name: "cpu"
+    driver_name: "coretemp"
+    temp_input: "temp1_input"
+    divisor: 1000
+    offset: 0
+FANS:
+  - name: "fan1"
+    driver_name: "nzxtsmart2"
+    handle: "pwm1"
+    max_control_value: 135
+    min_control_value: 0
+    fan_input: "fan1_input"
+    allow_shutoff: yes
+    minimum_duty_cycle: 22
+    sensors:
+      - name: "cpu"
+        curve: [
+         [20, 0],
+         [30, 20],
+         [40, 30],
+         [50, 40],
+         [90, 80]
+        ]
+  - name: "fan2"
+    driver_name: "nzxtsmart2"
+    handle: "pwm2"
+    max_control_value: 210
+    min_control_value: 0
+    fan_input: "fan2_input"
+    allow_shutoff: yes
+    minimum_duty_cycle: 30
+    sensors:
+      - name: "cpu"
+        curve: [
+         [20, 0],
+         [30, 20],
+         [40, 30],
+         [50, 50],
+         [90, 100]
+        ]
+  - name: "fan3"
+    driver_name: "nzxtsmart2"
+    handle: "pwm3"
+    max_control_value: 180
+    min_control_value: 0
+    fan_input: "fan3_input"
+    allow_shutoff: yes
+    minimum_duty_cycle: 28
+    sensors:
+      - name: "cpu"
+        curve: [
+         [20, 0],
+         [30, 20],
+         [40, 30],
+         [50, 50],
+         [90, 100]
+        ]
